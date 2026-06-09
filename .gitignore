@@ -16,3 +16,6 @@ node_modules/
 
 # Do not commit the full Codex home. Only selected session exports under /codex-sessions are tracked.
 /.codex/
+
+# Local safety backups generated before importing sessions.
+/codex-session-backups/
