@@ -1,5 +1,7 @@
 param(
-  [string]$Branch = "main"
+  [string]$Branch = "main",
+  [ValidateSet("merge", "replace")]
+  [string]$Mode = "merge"
 )
 
 $ErrorActionPreference = "Stop"
@@ -27,10 +29,11 @@ if (!(Test-Path ".git")) {
 }
 
 & $Git pull origin $Branch
-powershell -ExecutionPolicy Bypass -File ".\scripts\import-codex-sessions.ps1"
+powershell -ExecutionPolicy Bypass -File ".\scripts\import-codex-sessions.ps1" -Mode $Mode
 
 Write-Host ""
 Write-Host "Codex sessions and handoff files loaded from GitHub."
+Write-Host "Import mode: $Mode"
 Write-Host ""
 Write-Host "Ask Codex:"
 Write-Host "Read START_HERE.md, docs/GLOBAL_RULES.md, docs/HANDOFF_LOG.md, docs/CROSS_PC_WORKFLOW.md, docs/PROJECTS.md, and docs/CHAT_HANDOFF.md."

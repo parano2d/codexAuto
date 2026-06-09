@@ -21,6 +21,14 @@ PowerShell:
 powershell -ExecutionPolicy Bypass -File .\scripts\load-work.ps1
 ```
 
+기본값은 `merge` 모드입니다. 즉, 현재 PC의 기존 Codex 세션을 지우지 않고 GitHub 세션을 추가합니다.
+
+현재 PC의 세션을 GitHub 기준으로 덮어맞추고 싶을 때만:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\load-work.ps1 -Mode replace
+```
+
 그 다음 Codex에게:
 
 ```text
@@ -42,6 +50,24 @@ PowerShell:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\save-work.ps1 -Message "Update handoff" -Note "작업 내용 요약"
+```
+
+## 3. 작업 맥락 통합하기
+
+사무실 PC에 기존 Codex 세션이 있고, GitHub에 노트북에서 올린 세션도 있을 때 사용합니다.
+기존 세션을 삭제하지 않고 양쪽 세션을 합친 뒤 다시 GitHub에 올립니다.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\merge-work.ps1 -Message "Merge office Codex sessions" -Note "사무실 PC 기존 세션과 GitHub 세션 통합"
+```
+
+통합 과정:
+
+```text
+1. GitHub 최신 codexAuto pull
+2. GitHub 세션을 현재 PC ~/.codex/sessions에 merge import
+3. 현재 PC의 합쳐진 ~/.codex/sessions를 codexAuto로 export
+4. commit/push
 ```
 
 이 명령은 아래 작업을 자동으로 수행합니다.

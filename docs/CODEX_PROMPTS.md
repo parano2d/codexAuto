@@ -50,6 +50,15 @@ QR출석체크 프로젝트의 현재 상태와 주의사항을 요약해줘.
 scripts/save-work.ps1을 실행해서 GitHub parano2d/codexAuto에 마지막 작업 맥락을 업데이트해줘.
 ```
 
+## 기존 PC 세션과 GitHub 세션 통합
+
+```text
+작업 맥락 통합을 진행해줘.
+현재 PC의 기존 Codex 세션은 삭제하지 말고,
+GitHub parano2d/codexAuto의 세션과 병합한 뒤 다시 GitHub에 올려줘.
+scripts/merge-work.ps1을 사용해줘.
+```
+
 ## GitHub 플러그인만 연결된 Codex에게
 
 ```text

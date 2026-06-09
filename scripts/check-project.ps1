@@ -15,6 +15,7 @@ $required = @(
   "scripts\update-handoff.ps1",
   "scripts\load-work.ps1",
   "scripts\save-work.ps1",
+  "scripts\merge-work.ps1",
   "scripts\export-codex-sessions.ps1",
   "scripts\import-codex-sessions.ps1",
   "scripts\setup-github.ps1"
