@@ -13,6 +13,15 @@
 - Codex GitHub 플러그인 연결
 - `parano2d/codexAuto` 저장소 접근 가능
 
+## 짧은 명령어
+
+```text
+최초세팅!   저장소 clone/pull 후 명령 체계 확인
+올리기!     현재 PC Codex 세션을 GitHub에 업로드
+내려받기!   GitHub Codex 세션을 현재 PC에 병합 다운로드
+통합하기!   현재 PC 세션과 GitHub 세션을 병합 후 GitHub에 업로드
+```
+
 ## 1. 작업 맥락 불러오기
 
 PowerShell:

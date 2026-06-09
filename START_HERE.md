@@ -10,8 +10,11 @@
 다른 컴퓨터에서 이 저장소를 열면 Codex에게 아래처럼 요청하세요.
 
 ```text
+최초세팅!
+
 START_HERE.md, docs/GLOBAL_RULES.md, docs/HANDOFF_LOG.md,
-docs/CROSS_PC_WORKFLOW.md, docs/PROJECTS.md, docs/CHAT_HANDOFF.md를 읽고
+docs/CROSS_PC_WORKFLOW.md, docs/PROJECTS.md, docs/CHAT_HANDOFF.md,
+docs/COMMAND_REFERENCE.md를 읽고
 현재 글로벌 작업 규칙과 마지막 작업 맥락을 파악해줘.
 실제 파일 작업이 필요하면 프로젝트 루트를 나에게 먼저 물어봐.
 ```

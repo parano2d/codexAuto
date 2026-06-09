@@ -7,6 +7,14 @@
 
 ## 핵심 사용법
 
+빈 Codex에서 처음 시작할 때:
+
+```text
+최초세팅!
+GitHub 저장소 https://github.com/parano2d/codexAuto 를 clone하거나 pull한 뒤,
+FIRST_SETUP.md와 docs/COMMAND_REFERENCE.md를 읽고 사용법을 요약해줘.
+```
+
 작업 시작 시 Codex에게:
 
 ```text
@@ -38,6 +46,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\save-work.ps1 -Message "Updat
 
 - `START_HERE.md`: 새 PC에서 가장 먼저 읽을 안내문
 - `docs/GLOBAL_RULES.md`: 모든 PC와 모든 프로젝트에 적용되는 전역 규칙
+- `docs/COMMAND_REFERENCE.md`: `최초세팅/올리기/내려받기/통합하기` 명령 기준
 - `docs/HANDOFF_LOG.md`: 전역 작업 인수인계 로그
 - `docs/CHAT_HANDOFF.md`: Codex 대화/판단 맥락 저장 기준
 - `docs/CROSS_PC_WORKFLOW.md`: PC 간 이어받기 흐름
