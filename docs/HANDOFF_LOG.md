@@ -81,3 +81,15 @@ Then summarize the latest Codex work context. Ask for the project root only if f
 Next Codex prompt:
 Read START_HERE.md, docs/GLOBAL_RULES.md, docs/HANDOFF_LOG.md, docs/CROSS_PC_WORKFLOW.md, docs/PROJECTS.md, and docs/CHAT_HANDOFF.md.
 Then summarize the latest Codex work context. Ask for the project root only if file work is needed.
+
+---
+
+## 2026-06-11 16:28:31 +09:00 / 사론-MSI
+
+- Root: C:\Users\사론\OneDrive\바탕 화면\출석프로그램
+- Snapshot: .codex-handoff/LAST_SYNC.md
+- Memo: Finalized global commands: 최초세팅, 작업시작, 작업종료. Added AGENTS.md automatic command mapping and completed verification.
+
+Next Codex prompt:
+Read START_HERE.md, docs/GLOBAL_RULES.md, docs/HANDOFF_LOG.md, docs/CROSS_PC_WORKFLOW.md, docs/PROJECTS.md, and docs/CHAT_HANDOFF.md.
+Then summarize the latest Codex work context. Ask for the project root only if file work is needed.

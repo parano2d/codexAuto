@@ -10,7 +10,8 @@ GitHub 저장소 https://github.com/parano2d/codexAuto 를 clone하거나,
 
 그 다음 README.md, START_HERE.md, docs/COMMAND_REFERENCE.md,
 docs/WORK_COMMANDS.md를 읽고
-앞으로 내가 사용할 명령어인 최초세팅, 동기화 확인, 올리기, 내려받기, 병합하기의
+앞으로 내가 사용할 메인 명령어인 최초세팅, 작업시작, 작업종료와
+세부 명령어인 동기화 확인, 올리기, 내려받기, 병합하기의
 작동 방식을 요약해줘.
 
 실제 프로젝트 파일 루트는 자동 추정하지 말고,
@@ -37,6 +38,9 @@ powershell -ExecutionPolicy Bypass -File .\scripts\first-setup.ps1
 ## 최초 세팅 후 사용 명령
 
 ```text
+작업시작!
+작업종료!
+
 동기화 확인!
 올리기!
 내려받기!

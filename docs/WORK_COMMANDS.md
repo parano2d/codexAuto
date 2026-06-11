@@ -17,6 +17,9 @@
 
 ```text
 최초세팅!   저장소 clone/pull 후 명령 체계 확인
+작업시작!   GitHub와 로컬 상태를 비교하고 필요한 동기화를 자동 실행
+작업종료!   현재 PC 원본 세션을 GitHub에 commit/push
+
 동기화 확인! 로컬과 GitHub 상태를 해시로 비교하고 필요한 작업 자동 실행
 올리기!     현재 PC Codex 세션을 GitHub에 업로드
 내려받기!   GitHub Codex 세션을 현재 PC에 병합 다운로드

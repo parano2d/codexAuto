@@ -43,7 +43,39 @@ Codex가 할 일:
 파일 작업이 필요할 때만 사용자에게 루트를 물어봅니다.
 ```
 
-## 2. 동기화 확인
+## 2. 작업시작
+
+사용자 명령:
+
+```text
+작업시작!
+```
+
+Codex가 실행할 명령:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\auto-sync.ps1
+```
+
+GitHub와 로컬 원본 세션을 해시로 비교한 뒤 필요한 올리기, 내려받기 또는 병합을 자동 수행합니다.
+
+## 3. 작업종료
+
+사용자 명령:
+
+```text
+작업종료!
+```
+
+Codex가 실행할 명령:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\save-work.ps1 -Message "End Codex work session" -Note "Raw Codex session sync"
+```
+
+현재 PC의 원본 세션을 내보내고 GitHub에 commit/push 합니다. 채팅 내용을 요약하거나 분석하지 않습니다.
+
+## 4. 동기화 확인
 
 사용자 명령:
 
@@ -67,7 +99,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\auto-sync.ps1
 같은 세션 충돌 → 원본 보존 후 사용자 확인
 ```
 
-## 3. 올리기
+## 5. 올리기
 
 사용자 명령:
 
@@ -97,7 +129,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\save-work.ps1 -Message "Updat
 5. GitHub의 codexAuto가 최신 세션 상태가 됩니다.
 ```
 
-## 4. 내려받기
+## 6. 내려받기
 
 사용자 명령:
 
@@ -135,7 +167,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\load-work.ps1
 기존 로컬 Codex 세션을 삭제하지 않습니다.
 ```
 
-## 5. 병합하기
+## 7. 병합하기
 
 사용자 명령:
 
@@ -190,4 +222,10 @@ GitHub 내용을 현재 PC로 받고 싶다
 
 처음 쓰는 PC다
 → 최초세팅!
+
+평소 작업을 시작한다
+→ 작업시작!
+
+작업을 마치거나 다른 PC로 이동한다
+→ 작업종료!
 ```

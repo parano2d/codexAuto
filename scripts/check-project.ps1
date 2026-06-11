@@ -2,6 +2,7 @@ $ErrorActionPreference = "Stop"
 
 $Root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $required = @(
+  "AGENTS.md",
   "START_HERE.md",
   "FIRST_SETUP.md",
   "README.md",
