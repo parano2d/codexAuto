@@ -40,3 +40,5 @@ Write-Host " - To:   $Target"
 Write-Host " - Mode: $Mode"
 Write-Host ""
 Write-Host "Restart Codex if the imported sessions do not appear immediately."
+
+powershell -ExecutionPolicy Bypass -File (Join-Path $Root "scripts\write-sync-state.ps1") -CodexHome $CodexHome

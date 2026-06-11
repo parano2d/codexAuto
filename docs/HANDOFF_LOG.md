@@ -57,3 +57,15 @@ Then summarize global rules, project list, and the latest handoff.
 Next Codex prompt:
 Read START_HERE.md, docs/GLOBAL_RULES.md, docs/HANDOFF_LOG.md, docs/CROSS_PC_WORKFLOW.md, docs/PROJECTS.md, and docs/CHAT_HANDOFF.md.
 Then summarize the latest Codex work context. Ask for the project root only if file work is needed.
+
+---
+
+## 2026-06-11 16:00:00 +09:00 / 사론-MSI
+
+- Root: C:\Users\사론\OneDrive\바탕 화면\출석프로그램
+- Snapshot: .codex-handoff/LAST_SYNC.md
+- Memo: Implemented low-token hash-based startup sync, first setup, upload, download, and merge automation; isolated round-trip tests passed.
+
+Next Codex prompt:
+Read START_HERE.md, docs/GLOBAL_RULES.md, docs/HANDOFF_LOG.md, docs/CROSS_PC_WORKFLOW.md, docs/PROJECTS.md, and docs/CHAT_HANDOFF.md.
+Then summarize the latest Codex work context. Ask for the project root only if file work is needed.

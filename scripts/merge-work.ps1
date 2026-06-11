@@ -43,11 +43,13 @@ Write-Host "Step 4/4: Committing and pushing merged sessions..."
 $status = & $Git status --porcelain
 if (!$status) {
   Write-Host "No changes to commit."
+  powershell -ExecutionPolicy Bypass -File ".\scripts\write-sync-state.ps1"
   exit 0
 }
 
 & $Git commit -m $Message
 & $Git push origin $Branch
+powershell -ExecutionPolicy Bypass -File ".\scripts\write-sync-state.ps1"
 
 Write-Host ""
 Write-Host "Merge complete. Local and GitHub Codex session files are now combined."

@@ -12,6 +12,12 @@
 최초세팅!
 ```
 
+별칭:
+
+```text
+최소세팅!
+```
+
 목적:
 
 ```text
@@ -25,7 +31,9 @@ Codex가 할 일:
 2. 로컬에 저장소가 없으면 clone합니다.
 3. 로컬에 저장소가 있으면 pull 합니다.
 4. README.md, START_HERE.md, docs/COMMAND_REFERENCE.md, docs/WORK_COMMANDS.md를 읽습니다.
-5. 사용 가능한 명령어 3개를 사용자에게 요약합니다.
+5. `scripts/first-setup.ps1`을 실행합니다.
+6. 바탕화면에 `Codex 동기화 실행` 바로가기를 만듭니다.
+7. 사용 가능한 명령어를 사용자에게 요약합니다.
 ```
 
 주의:
@@ -35,7 +43,31 @@ Codex가 할 일:
 파일 작업이 필요할 때만 사용자에게 루트를 물어봅니다.
 ```
 
-## 2. 올리기
+## 2. 동기화 확인
+
+사용자 명령:
+
+```text
+동기화 확인!
+```
+
+Codex가 실행할 명령:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\auto-sync.ps1
+```
+
+판정은 원본 채팅 내용을 모델이 읽지 않고 파일 경로, SHA256, 크기, 마지막 동기화 해시만 사용합니다.
+
+```text
+동일       → 아무 작업 없음
+로컬 최신  → 자동 올리기
+클라우드 최신 → 자동 내려받기
+양쪽 별도 변경 → 자동 병합
+같은 세션 충돌 → 원본 보존 후 사용자 확인
+```
+
+## 3. 올리기
 
 사용자 명령:
 
@@ -65,7 +97,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\save-work.ps1 -Message "Updat
 5. GitHub의 codexAuto가 최신 세션 상태가 됩니다.
 ```
 
-## 3. 내려받기
+## 4. 내려받기
 
 사용자 명령:
 
@@ -103,13 +135,15 @@ powershell -ExecutionPolicy Bypass -File .\scripts\load-work.ps1
 기존 로컬 Codex 세션을 삭제하지 않습니다.
 ```
 
-## 4. 통합하기
+## 5. 병합하기
 
 사용자 명령:
 
 ```text
-통합하기!
+병합하기!
 ```
+
+기존 별칭 `통합하기!`도 같은 의미로 처리합니다.
 
 목적:
 
@@ -152,7 +186,7 @@ GitHub 내용을 현재 PC로 받고 싶다
 → 내려받기!
 
 현재 PC와 GitHub 내용을 둘 다 합치고 싶다
-→ 통합하기!
+→ 병합하기!
 
 처음 쓰는 PC다
 → 최초세팅!

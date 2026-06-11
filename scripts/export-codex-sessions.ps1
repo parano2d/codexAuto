@@ -14,7 +14,44 @@ if (!(Test-Path $Source)) {
 
 New-Item -ItemType Directory -Force -Path $Target | Out-Null
 
-Copy-Item -Path (Join-Path $Source "*") -Destination $Target -Recurse -Force
+function Copy-SharedFile($SourcePath, $DestinationPath) {
+  $parent = Split-Path -Parent $DestinationPath
+  New-Item -ItemType Directory -Force -Path $parent | Out-Null
+  $input = [System.IO.File]::Open($SourcePath, 'Open', 'Read', 'ReadWrite')
+  $output = [System.IO.File]::Open($DestinationPath, 'Create', 'Write', 'None')
+  try {
+    $remaining = $input.Length
+    $buffer = New-Object byte[] 65536
+    while ($remaining -gt 0) {
+      $wanted = [Math]::Min($buffer.Length, $remaining)
+      $read = $input.Read($buffer, 0, $wanted)
+      if ($read -le 0) { break }
+      $output.Write($buffer, 0, $read)
+      $remaining -= $read
+    }
+  } finally {
+    $output.Dispose()
+    $input.Dispose()
+  }
+
+  $snapshot = [System.IO.File]::Open($DestinationPath, 'Open', 'ReadWrite', 'None')
+  try {
+    for ($position = $snapshot.Length - 1; $position -ge 0; $position--) {
+      $snapshot.Position = $position
+      if ($snapshot.ReadByte() -eq 10) {
+        $snapshot.SetLength($position + 1)
+        break
+      }
+    }
+  } finally {
+    $snapshot.Dispose()
+  }
+}
+
+Get-ChildItem -Path $Source -Recurse -File -Filter "*.jsonl" | ForEach-Object {
+  $relative = $_.FullName.Substring($Source.Length).TrimStart("\")
+  Copy-SharedFile $_.FullName (Join-Path $Target $relative)
+}
 
 $manifest = Join-Path $Root "codex-sessions\MANIFEST.md"
 $now = Get-Date

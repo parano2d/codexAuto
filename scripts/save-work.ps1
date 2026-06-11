@@ -40,11 +40,13 @@ powershell -ExecutionPolicy Bypass -File ".\scripts\export-codex-sessions.ps1"
 $status = & $Git status --porcelain
 if (!$status) {
   Write-Host "No changes to commit."
+  powershell -ExecutionPolicy Bypass -File ".\scripts\write-sync-state.ps1"
   exit 0
 }
 
 & $Git commit -m $Message
 & $Git push origin $Branch
+powershell -ExecutionPolicy Bypass -File ".\scripts\write-sync-state.ps1"
 
 Write-Host ""
 Write-Host "Workspace saved to GitHub."

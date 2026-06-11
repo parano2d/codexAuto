@@ -7,6 +7,14 @@
 
 ## 핵심 사용법
 
+새 PC 최초 1회:
+
+```text
+최초세팅!
+```
+
+설정 후 바탕화면의 `Codex 동기화 실행` 바로가기를 사용하면 Codex 실행 전에 자동으로 최신 상태를 비교합니다.
+
 빈 Codex에서 처음 시작할 때:
 
 ```text
@@ -52,5 +60,4 @@ powershell -ExecutionPolicy Bypass -File .\scripts\save-work.ps1 -Message "Updat
 - `docs/CROSS_PC_WORKFLOW.md`: PC 간 이어받기 흐름
 - `docs/CODEX_PROMPTS.md`: Codex에게 붙여넣을 명령문
 - `docs/WORK_COMMANDS.md`: 작업 맥락 불러오기/저장하기 명령
-- `docs/WORK_COMMANDS.md`: 작업환경 불러오기/저장하기 명령
 - `docs/PROJECTS.md`: 프로젝트 목록, 실제 루트는 작업 시 별도 확인

@@ -20,6 +20,11 @@ $required = @(
   "scripts\merge-work.ps1",
   "scripts\export-codex-sessions.ps1",
   "scripts\import-codex-sessions.ps1",
+  "scripts\sync-status.ps1",
+  "scripts\auto-sync.ps1",
+  "scripts\write-sync-state.ps1",
+  "scripts\launch-codex-sync.ps1",
+  "scripts\first-setup.ps1",
   "scripts\setup-github.ps1"
 )
 
