@@ -93,3 +93,15 @@ Then summarize the latest Codex work context. Ask for the project root only if f
 Next Codex prompt:
 Read START_HERE.md, docs/GLOBAL_RULES.md, docs/HANDOFF_LOG.md, docs/CROSS_PC_WORKFLOW.md, docs/PROJECTS.md, and docs/CHAT_HANDOFF.md.
 Then summarize the latest Codex work context. Ask for the project root only if file work is needed.
+
+---
+
+## 2026-06-13 12:46:52 +09:00 / KSR_MAIN
+
+- Root: C:\Users\KSR\Documents\Codex\2026-06-13\github-https-github-com-parano2d-codexauto\codexAuto
+- Snapshot: .codex-handoff/LAST_SYNC.md
+- Memo: Automatic non-conflicting session merge from KSR_MAIN
+
+Next Codex prompt:
+Read START_HERE.md, docs/GLOBAL_RULES.md, docs/HANDOFF_LOG.md, docs/CROSS_PC_WORKFLOW.md, docs/PROJECTS.md, and docs/CHAT_HANDOFF.md.
+Then summarize the latest Codex work context. Ask for the project root only if file work is needed.
